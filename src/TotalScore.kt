@@ -1,0 +1,1 @@
+data class TotalScore(val genre: Genre, val score: Int, val subGenre: SubGenre = SubGenre.DEFAULT)
