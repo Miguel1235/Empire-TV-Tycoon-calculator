@@ -1,6 +1,11 @@
 fun main() {
-    val movies = howMuchLikes(listOf(Audience.MEN, Audience.WOMEN), preferences)
+    val empire = EmpireTv()
 
-    movies.forEach { println("${it.genre}-${it.subGenre}: ${it.score}") }
-//    addSubGenres(movies, subGenres, Audience.WOMEN)
+    val spectator = listOf(Audience.MEN, Audience.WOMEN,Audience.CHILDREN)
+
+    val scores = empire.howMuchLikes(spectator, preferences)
+    val scoresSubGenres = empire.addSubGenres(scores, subGenres, Audience.WOMEN)
+
+    empire.printScores(scores)
+    empire.printScores(scoresSubGenres)
 }
